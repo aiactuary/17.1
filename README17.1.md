@@ -13,7 +13,7 @@ This project compares **KNN**, **Logistic Regression**, **Decision Tree**, and *
 - **Key drivers:** Logistic coefficients and tree importances highlight features associated with higher conversion likelihood (e.g., contact type, prior outcome, month). Consider treatment of **`duration`** carefully due to potential leakage if used before a call is completed.
 
 ## Data & Preparation
-- Dataset: `bank-additional-full.csv` (UCI Bank Marketing).
+- Dataset: [bank-additional-full.csv](bank-additional-full.csv) (UCI Bank Marketing).
 - Steps: Missing value checks, type handling, one-hot encoding for categoricals, standardization for numerics via a `ColumnTransformer` in a pipeline.
 - Split: Stratified train/test (80/20).
 
