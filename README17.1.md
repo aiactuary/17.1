@@ -2,7 +2,7 @@
 # Practical Application 17.1 — Comparing Classifiers (Bank Marketing)
 
 **Notebook:** [Practical_Application_17_1_Bank_Marketing.ipynb](Practical_Application_17_1_Bank_Marketing.ipynb)
-**Data:** bank-additional-full.csv
+**Data:** [bank-additional-full.csv](bank-additional-full.csv)
 
 ## Summary of Findings
 This project compares **KNN**, **Logistic Regression**, **Decision Tree**, and **SVM** to predict whether a client will subscribe to a term deposit (`y`) from the UCI Bank Marketing dataset.
