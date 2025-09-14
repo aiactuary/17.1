@@ -25,18 +25,19 @@ This project compares **KNN**, **Logistic Regression**, **Decision Tree**, and *
 - Seaborn EDA: target distribution, categorical counts, continuous distributions, boxplots, correlation heatmap, and subplots.
 - Model diagnostics: ROC curves and confusion matrices.
 
-## Actionable Insights
-- **Targeting:** Focus outbound effort on segments with higher predicted probabilities.
+## Findings
+- The business problem was to identify customers most likely to subscribe to a bank product following a marketing campaign.
+- After testing multiple models, **Logistic Regression achieved the highest AUC (~0.94)**, showing the best ability to rank positive cases above negative ones.
+- While SVM performed similarly well, AUC is a threshold-independent metric and indicates Logistic Regression is the most reliable model overall.
+
+- **Next steps:** refine feature engineering (e.g., handling `pdays` more carefully, dropping leakage-prone features like `duration`), try ensemble methods, and consider calibration for probability outputs to support business decision thresholds.
+
+## Actionable insight
+- **Targeting:** Using Logistic Regression predictions to prioritize customer calls could improve campaign efficiency and reduce wasted effort.
 - **Operations:** Select a threshold aligned with budgeted call volume and desired recall of positives.
 - **Policy:** Monitor fairness across key demographics; adjust targeting rules as needed.
 
 ## Next Steps
 1. Incorporate **cost-sensitive** thresholding (expected value vs. call costs).
-2. Add **calibration** for better probability estimates.
-3. Use **time-based splits** to reflect campaign chronology.
-4. Track **data drift** and re-tune quarterly.
-5. Provide **explanations** to agents (top features per lead).
-
----
-
-> To run: open the notebook, place `bank-additional-full.csv` alongside it or at `/mnt/data/`, and run all cells.
+2. Use **time-based splits** to reflect campaign chronology.
+3. Provide **explanations** to agents (top features per lead).
