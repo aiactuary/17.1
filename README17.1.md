@@ -7,7 +7,7 @@
 ## Summary of Findings
 This project compares **KNN**, **Logistic Regression**, **Decision Tree**, and **SVM** to predict whether a client will subscribe to a term deposit (`y`) from the UCI Bank Marketing dataset.
 
-- **Business goal:** Improve call efficiency by prioritizing customers with higher subscription propensity.
+- **Business goal:** Improve call efficiency by prioritizing customers with higher subscription probability.
 - **Primary metric:** **ROC AUC** (rank-ordering ability). Secondary: **Recall**, **Precision**, **F1**, **Accuracy**.
 - **Result overview:** After cross-validated grid search, the top-performing model (by AUC) is identified in the results table. ROC curves and confusion matrices are provided. Threshold tuning shows the precision/recall trade-off to meet campaign goals.
 - **Key drivers:** Logistic coefficients and tree importances highlight features associated with higher conversion likelihood (e.g., contact type, prior outcome, month). Consider treatment of **`duration`** carefully due to potential leakage if used before a call is completed.
